@@ -1,0 +1,27 @@
+<%- include('head.ejs') %>
+
+    <h1>Shopping Cart Products</h1>
+    <div class="container">
+        <% for(let i of products) { %>
+            <div class="product-item">
+                <p><a>
+                        <%= i.name %>
+                    </a>
+                </p>
+                <p>
+                    <%= i.description %>
+                </p>
+                <span>
+                    $<%= i.price %>
+                </span>
+                <p>
+                    Quantity: <%= i.quantity %>
+                </p>
+				<p>
+                    Total price: <%= i.totalprice %>
+                </p>
+            </div>
+            <% } %>
+    </div>
+</body>	
+</html>
